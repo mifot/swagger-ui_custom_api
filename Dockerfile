@@ -5,7 +5,7 @@ ENV SWAGGER_YAML "swagger.yaml"
 
 RUN rm -f /usr/share/nginx/run.sh 
 
-COPY ./api/* /usr/share/nginx/html/api
+COPY ./api/* /usr/share/nginx/html/api/
 
 COPY ./run.sh /usr/share/nginx/
 
