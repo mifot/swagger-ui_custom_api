@@ -27,8 +27,8 @@ if api yaml files weren't availbe in `app` directory while the docker image was 
 
 ```docker run -p 80:8080 -e SWAGGER_YAML=swagger.yaml -v /api:/usr/share/nginx/html/api swagger-ui_custom_api```
 
-Note:
-succesfully tested with swaggerapi/swagger-ui:v3.28.0
+**Note:**
+succesfully tested with `swaggerapi/swagger-ui:v3.28.0`
 
-Remember:
+**Remember:**
 to tests some aplication's api via deployed swagger, the aplication needs to supports CORS operation. If not, use [CORS Unblock](https://addons.mozilla.org/pl/firefox/addon/cors-unblock/?src=search) add-on in mozilla firefox browser. 
