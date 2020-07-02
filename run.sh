@@ -61,7 +61,7 @@ if [[ -n "${PORT}" ]]; then
 fi
 
 if [[ "$SWAGGER_YAML" ]]; then
-    sed -i "s|https:\/\/petstore.swagger.io\/v2\/swagger.json|$SWAGGER_YAML|" $INDEX_FILE
+    sed -i "s|https:\/\/petstore.swagger.io\/v2\/swagger.json|api/$SWAGGER_YAML|" $INDEX_FILE
 fi
 
 find $NGINX_ROOT -type f -regex ".*\.\(html\|js\|css\)" -exec sh -c "gzip < {} > {}.gz" \;
