@@ -14,6 +14,7 @@ and run the container:
 ```docker run -d -p 80:8080 swagger-ui_custom_api```
 
 > -d  detached mode: run containers in the background
+
 > -p 80:8080 port mapping 80 on host's machine to container's 8080 (if required change port number from 80 to selected one) 
 
 if name of api yaml file is different than `swagger.yaml` (default) the `SWAGGER_YAML` env variable should be set while the contaner is started, like below:
