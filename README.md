@@ -23,9 +23,9 @@ if name of api yaml file is different than `swagger.yaml` (default) the `SWAGGER
 
 > thanks to that variable, when you access swagger via browser the selected file will be loaded as default. The file can be changed using `Explore` pool in website IF the file is located in `app` directory 
 
-if api yaml files weren't availbe in `app` directory while the docker image was building, docker volumes can be used to synchronize `api` directory between host and docker container, like below:
+if api yaml files weren't availbe in `app` directory while the docker image was building, docker volumes can be used to synchronize `api` directory between host and docker container, (use absolute path to `api` directory!) like below:
 
-```docker run -p 80:8080 -e SWAGGER_YAML=swagger.yaml -v api:/usr/share/nginx/html/api swagger-ui_custom_api```
+```docker run -p 80:8080 -e SWAGGER_YAML=swagger.yaml -v /home/test/api:/usr/share/nginx/html/api swagger-ui_custom_api```
 
 **Note:**
 succesfully tested with `swaggerapi/swagger-ui:v3.28.0`
